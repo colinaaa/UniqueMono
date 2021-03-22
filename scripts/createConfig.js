@@ -7,10 +7,10 @@ import sourcemap from 'rollup-plugin-sourcemaps';
 
 const outputDir = 'dist';
 
-function createConfig({ basePath, pkg, input }) {
+function createConfig({ basePath, pkg, input = 'src/index.ts' }) {
   const { main } = pkg;
   return {
-    input: path.join(basePath, input ?? 'src/index.ts'),
+    input: path.join(basePath, input),
     output: [
       {
         file: path.join(basePath, main),
