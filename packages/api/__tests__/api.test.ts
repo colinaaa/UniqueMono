@@ -2,7 +2,7 @@ import api from '../src/api';
 
 describe('@uniqs/api', () => {
   it('needs tests', () => {
-    api(1, 2);
+    api();
     expect(0).toBe(0);
   });
 });
