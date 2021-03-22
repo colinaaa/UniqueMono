@@ -37,7 +37,6 @@
   },
   "scripts": {
     "build": "rollup -c",
-    "version": "projectz compile",
     "test": "echo \"Error: run tests from root\" && exit 1"
   }
 }
