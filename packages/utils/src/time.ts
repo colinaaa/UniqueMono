@@ -1,12 +1,10 @@
-export function getMidnight(time: number): number;
-export function getMidnight(date: Date): number;
-export function getMidnight(dateOrTime: Date | number): number {
+export function getMidnight(dateOrTime: Date | number): Date {
   const newDate = new Date(dateOrTime);
   newDate.setHours(0);
   newDate.setMinutes(0);
   newDate.setSeconds(0);
   newDate.setMilliseconds(0);
-  return newDate.getDate();
+  return newDate;
 }
 
 export function convertToDateString(data: Date): string;
