@@ -29,8 +29,7 @@
     "url": "https://github.com/colinaaa/UniqueMono/issues"
   },
   "dependencies": {
-    "idb-keyval": "^5.0.4",
-    "utility-types": "^3.10.0"
+    "idb-keyval": "^5.0.4"
   },
   "devDependencies": {
     "fake-indexeddb": "^3.1.2"
