@@ -1,14 +1,17 @@
 import { clear, get, set } from 'idb-keyval';
 
-// keys that has string value
-type StringValueKeysOf<T> = {
-  [Key in keyof T]-?: T[Key] extends string | undefined ? Key : never;
-}[keyof T];
+// keys that are string
+type StringKeyOf<T> = Extract<keyof T, string>;
 
-// keys that has't string value
+// keys with string value
+type StringValueKeysOf<T> = {
+  [K in keyof T]-?: T[K] extends string | undefined ? K : never;
+}[StringKeyOf<T>];
+
+// keys with non-string value
 type NonStringValueKeysOf<T> = {
-  [Key in keyof T]-?: T[Key] extends string | undefined ? never : Key;
-}[keyof T];
+  [K in keyof T]-?: T[K] extends string | undefined ? never : K;
+}[StringKeyOf<T>];
 
 /**
  * @example
@@ -35,23 +38,19 @@ export class TypedStorage<T> {
   }
 
   get<K extends NonStringValueKeysOf<T>>(key: K): Promise<T[K] | undefined> {
-    // TODO: remove as string
-    return get<T[K]>(key as string);
+    return get<T[K]>(key);
   }
 
   getSync<K extends StringValueKeysOf<T>>(key: K): string | null {
-    // TODO: remove as string
-    return this.localStorage.getItem(key as string);
+    return this.localStorage.getItem(key);
   }
 
   set<K extends NonStringValueKeysOf<T>>(key: K, value: T[K]): Promise<void> {
-    // TODO: remove as string
-    return set(key as string, value);
+    return set(key, value);
   }
 
   setSync<K extends StringValueKeysOf<T>>(key: K, value: string): void {
-    // TODO: remove as string
-    this.localStorage.setItem(key as string, value);
+    this.localStorage.setItem(key, value);
   }
 
   clearSync(): void {
