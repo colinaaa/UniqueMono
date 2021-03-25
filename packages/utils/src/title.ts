@@ -16,7 +16,7 @@ export const compareTitle = (prev: string, next: string): 0 | -1 | 1 => {
   return 0;
 };
 
-export const titleConverter = (title: string): string => {
+export const convertTitle = (title: string): string => {
   try {
     const last = title.slice(4);
     const abbr = ['S', 'C', 'A'];
