@@ -50,6 +50,8 @@ describe('@uniqs/utils/title', () => {
       expect(convertTitle('foo')).toBe('');
       expect(convertTitle('202夏令营')).toBe('');
       expect(convertTitle('2020春')).toBe('');
+      expect(convertTitle('')).toBe('');
+      expect(convertTitle('1234567890wertyuio')).toBe('');
     });
   });
 });
