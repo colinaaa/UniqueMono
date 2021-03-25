@@ -4,14 +4,20 @@
   "workspaces": [
     "packages/*"
   ],
+  "publishConfig": {
+    "access": "public"
+  },
   "scripts": {
     "build": "lerna run build",
     "coverage": "jest --coverage",
     "lint": "eslint --cache .",
+    "release": "yarn build && yarn changeset publish",
     "test": "jest",
     "prepare": "husky install"
   },
   "devDependencies": {
+    "@changesets/changelog-github": "^0.3.0",
+    "@changesets/cli": "^2.14.1",
     "@commitlint/cli": "^12.1.0",
     "@commitlint/config-conventional": "^12.1.0",
     "@commitlint/config-lerna-scopes": "^12.1.0",
