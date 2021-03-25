@@ -7,7 +7,7 @@ module.exports = {
   parser: '@typescript-eslint/parser',
   parserOptions: {
     tsconfigRootDir: __dirname,
-    project: ['./tsconfig.json'],
+    project: ['./tsconfig.json', './packages/**/tsconfig.json'],
     ecmaVersion: 2020,
     sourceType: 'module',
   },
@@ -29,5 +29,13 @@ module.exports = {
   settings: {
     'import/internal-regex': ['^@uniqs/'],
   },
-  ignorePatterns: ['scripts', 'coverage', '.eslintrc.js', '.prettierrc.js', 'jest.config.js', '**/dist'],
+  ignorePatterns: [
+    'scripts',
+    'coverage',
+    '.prettierrc.js',
+    '**/rollup.config.js',
+    '**/.eslintrc.js',
+    '**/jest.config.js',
+    '**/dist',
+  ],
 };
