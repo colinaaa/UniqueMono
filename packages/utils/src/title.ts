@@ -27,7 +27,7 @@ export const convertTitle = (title: string): string => {
     }
     const j = full.indexOf(last);
     if (j >= 0) {
-      return title.slice(0, 4) + abbr[i];
+      return title.slice(0, 4) + abbr[j];
     }
     return '';
   } catch (e) {
