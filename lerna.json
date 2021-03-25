@@ -4,6 +4,10 @@
   "npmClient": "yarn",
   "changelogPreset": "conventional",
   "useWorkspaces": true,
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.yarnpkg.com/"
+  },
   "command": {
     "publish": {
       "ignoreChanges": ["ignored-file", "*.md"],

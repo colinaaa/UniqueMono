@@ -31,10 +31,6 @@
   "files": [
     "dist"
   ],
-  "publishConfig": {
-    "access": "public",
-    "registry": "https://registry.yarnpkg.com/"
-  },
   "scripts": {
     "build": "rollup -c",
     "test": "echo \"Error: run tests from root\" && exit 1"
