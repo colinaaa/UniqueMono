@@ -1,4 +1,4 @@
-import { getMidnight } from '../src/time';
+import { getMidnight, convertToDateString } from '../src/time';
 
 describe('@uniqs/utils/time', () => {
   describe('getMidnight', () => {
@@ -23,6 +23,20 @@ describe('@uniqs/utils/time', () => {
       // @ts-ignore
       expect(getMidnight('foo')).toBeInstanceOf(Date);
       expect(getMidnight(11111111111111111111111111111111111).toString()).toBe('Invalid Date');
+    });
+  });
+
+  describe('convertToDateString', () => {
+    it('should work with number', () => {
+      const time = 1616686584042;
+
+      expect(convertToDateString(0)).toBe('1970年1月1日');
+      expect(convertToDateString(time)).toBe('2021年3月25日');
+    });
+
+    it('should work with date', () => {
+      const date = new Date('2021/03/25');
+      expect(convertToDateString(date)).toBe('2021年3月25日');
     });
   });
 });
