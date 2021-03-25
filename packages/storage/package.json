@@ -1,6 +1,6 @@
 {
   "name": "@uniqs/storage",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "the storage library used in Unique Studio frontend",
   "author": "Colin <colinwang.0616@gmail.com>",
   "homepage": "https://github.com/colinaaa/UniqueMono#readme",
