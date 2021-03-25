@@ -8,10 +8,12 @@
     "build": "lerna run build",
     "coverage": "jest --coverage",
     "lint": "eslint --cache .",
+    "release": "yarn build && yarn changeset publish",
     "test": "jest",
     "prepare": "husky install"
   },
   "devDependencies": {
+    "@changesets/cli": "^2.14.1",
     "@commitlint/cli": "^12.1.0",
     "@commitlint/config-conventional": "^12.1.0",
     "@commitlint/config-lerna-scopes": "^12.1.0",
