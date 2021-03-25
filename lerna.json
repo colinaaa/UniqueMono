@@ -2,17 +2,14 @@
   "packages": ["packages/*"],
   "version": "independent",
   "npmClient": "yarn",
-  "changelogPreset": "conventional",
   "useWorkspaces": true,
   "publishConfig": {
-    "access": "public",
-    "registry": "https://registry.yarnpkg.com/"
+    "access": "public"
   },
   "command": {
     "publish": {
       "ignoreChanges": ["ignored-file", "*.md"],
-      "message": "chore(release): publish",
-      "conventionalCommits": true
+      "message": "chore: publish"
     }
   }
 }
