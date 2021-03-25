@@ -32,18 +32,21 @@ describe('@uniqs/utils/title', () => {
 
   describe('convertTitle', () => {
     it('should convert autumn', () => {
-      expect(convertTitle('2020A')).toBe('2020秋招');
+      expect(convertTitle('2020A')).toBe('2020秋季招新');
       expect(convertTitle('2020秋招')).toBe('2020A');
+      expect(convertTitle('2020秋季招新')).toBe('2020A');
     });
 
     it('should convert spring', () => {
-      expect(convertTitle('2020S')).toBe('2020春招');
+      expect(convertTitle('2020S')).toBe('2020春季招新');
       expect(convertTitle('2020春招')).toBe('2020S');
+      expect(convertTitle('2020春季招新')).toBe('2020S');
     });
 
     it('should convert camp', () => {
-      expect(convertTitle('2020C')).toBe('2020夏令营');
+      expect(convertTitle('2020C')).toBe('2020夏令营招新');
       expect(convertTitle('2020夏令营')).toBe('2020C');
+      expect(convertTitle('2020夏令营招新')).toBe('2020C');
     });
 
     it('should deal with invalid inputs', () => {
