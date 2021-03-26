@@ -2,6 +2,8 @@
 
 [![jest](https://jestjs.io/img/jest-badge.svg)](https://github.com/facebook/jest)
 [![lerna](https://img.shields.io/badge/maintained%20with-lerna-cc00ff.svg)](https://lerna.js.org/)
+[![Node.js CI](https://github.com/colinaaa/UniqueMono/actions/workflows/node.js.yml/badge.svg?branch=main)](https://github.com/colinaaa/UniqueMono/actions/workflows/node.js.yml)
+[![Coverage Status](https://coveralls.io/repos/github/colinaaa/UniqueMono/badge.svg?branch=main)](https://coveralls.io/github/colinaaa/UniqueMono?branch=main)
 
 The monorepo for Unique Stduio.
 
