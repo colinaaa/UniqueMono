@@ -1,6 +1,6 @@
 {
   "name": "@uniqs/api",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "the API definition for Unique Studio",
   "author": "Unique Studio",
   "homepage": "https://github.com/UniqueStudio/UniqueMono/packages/api",
@@ -36,6 +36,6 @@
     "test": "echo \"Error: run tests from root\" && exit 1"
   },
   "dependencies": {
-    "@uniqs/config": "^0.0.1"
+    "@uniqs/config": "^0.0.2"
   }
 }
