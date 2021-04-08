@@ -1,13 +1,13 @@
 <!-- TITLE/ -->
 
-<h1>@uniqs/types</h1>
+<h1>@uniqs/config</h1>
 
 <!-- /TITLE -->
 
 
 <!-- DESCRIPTION/ -->
 
-the translator for Unique Studio
+the configration for Unique Studio
 
 <!-- /DESCRIPTION -->
 
@@ -15,7 +15,7 @@ the translator for Unique Studio
 ## Usage
 
 ```
-import types from '@uniqs/types';
+import config from '@uniqs/config';
 
 // TODO: DEMONSTRATE API
 ```
