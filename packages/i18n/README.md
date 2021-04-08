@@ -15,7 +15,7 @@ the translator for Unique Studio
 ## Usage
 
 ```
-import api from '@uniqs/i18n';
+import i18n from '@uniqs/i18n';
 
 // TODO: DEMONSTRATE API
 ```
