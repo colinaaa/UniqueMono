@@ -34,5 +34,8 @@
   "scripts": {
     "build": "rollup -c",
     "test": "echo \"Error: run tests from root\" && exit 1"
+  },
+  "dependencies": {
+    "@uniqs/config": "^0.0.1"
   }
 }
