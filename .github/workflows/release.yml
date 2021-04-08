@@ -27,14 +27,14 @@ jobs:
         run: yarn
 
       - name: Creating .npmrc
-          run: |
-            cat << EOF > "$HOME/.npmrc"
-            @uniqs:registry=https://registry.npmjs.org/
-            email=qingyu.wang@aliyun.com
-            //registry.npmjs.org/:_authToken=$NPM_TOKEN
-            EOF
-          env:
-            NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+        run: |
+          cat << EOF > "$HOME/.npmrc"
+          @uniqs:registry=https://registry.npmjs.org/
+          email=qingyu.wang@aliyun.com
+          //registry.npmjs.org/:_authToken=$NPM_TOKEN
+          EOF
+        env:
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
 
       - name: Create Release Pull Request or Publish to npm
         id: changesets
