@@ -1,16 +1,6 @@
-<!-- TITLE/ -->
-
 <h1>@uniqs/api</h1>
 
-<!-- /TITLE -->
-
-
-<!-- DESCRIPTION/ -->
-
 the API definition for Unique Studio
-
-<!-- /DESCRIPTION -->
-
 
 ## Usage
 
@@ -19,8 +9,6 @@ import api from '@uniqs/api';
 
 // TODO: DEMONSTRATE API
 ```
-
-<!-- LICENSE/ -->
 
 <h2>License</h2>
 
@@ -31,5 +19,3 @@ Unless stated otherwise all works are:
 and licensed under:
 
 <ul><li><a href="http://spdx.org/licenses/MIT.html">MIT License</a></li></ul>
-
-<!-- /LICENSE -->
