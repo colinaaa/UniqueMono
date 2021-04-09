@@ -1,4 +1,5 @@
 import { Gender, Grade, Rank, Step } from '@uniqs/config';
+import { Optional } from '@uniqs/utils';
 import { Comment, Group, Interview, SMSType } from './types';
 
 // =================
@@ -41,6 +42,11 @@ export interface CreateCandidate extends SetCandidateInfo {
   rid: string;
 }
 
+export interface SelectInterviewSlots {
+  abandon: boolean;
+  iids: string[];
+}
+
 export interface MoveCandidate {
   from: Step;
   to: Step;
@@ -60,7 +66,7 @@ export interface AllocateMany {
 
 export interface AddComment {
   cid: string;
-  comment: Comment;
+  comment: Omit<Comment, 'id' | 'user'>;
   token: string;
 }
 
@@ -76,7 +82,7 @@ export interface SetRecruitmentSchedule {
 }
 
 export interface SetRecruitmentInterviews {
-  inverviews: Interview[];
+  interviews: Optional<Omit<Interview<string>, 'name'>, 'id'>[];
 }
 
 export interface CreateRecruitment {

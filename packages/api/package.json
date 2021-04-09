@@ -36,6 +36,7 @@
     "test": "echo \"Error: run tests from root\" && exit 1"
   },
   "dependencies": {
-    "@uniqs/config": "^0.0.3"
+    "@uniqs/config": "^0.0.3",
+    "@uniqs/utils": "^0.1.0"
   }
 }
