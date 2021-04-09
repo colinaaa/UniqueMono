@@ -1,5 +1,11 @@
 # @uniqs/api
 
+## 0.1.0
+
+### Minor Changes
+
+- [#22](https://github.com/colinaaa/UniqueMono/pull/22) [`ae455ab`](https://github.com/colinaaa/UniqueMono/commit/ae455abde9c5302c8dccb3bdf7daa4f31aa50b71) Thanks [@colinaaa](https://github.com/colinaaa)! - add most of the request and response type in api package
+
 ## 0.0.4
 
 ### Patch Changes
