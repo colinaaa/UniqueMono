@@ -1,4 +1,6 @@
-import { Evaluation, Gender, Grade, Group, GroupOrTeam, Period, Rank, Status, Step } from '@uniqs/config';
+import { Evaluation, Gender, Grade, Period, Rank, Step } from '@uniqs/config';
+
+import { Group, GroupOrTeam } from './types';
 
 export interface CandidateForm {
   id: string;
@@ -14,7 +16,7 @@ export interface CandidateForm {
   intro: string;
   isQuick: boolean;
   referrer?: string;
-  resume?: string;
+  resume?: string | File | FileList;
 }
 
 export interface Candidate<T = Date> extends CandidateForm {
@@ -79,15 +81,3 @@ export interface Message {
   avatar: string;
   content: string;
 }
-
-interface SuccessResponse<T> {
-  status: Status.success | Status.info;
-  payload: T;
-}
-
-interface FailureResponse {
-  status: Status.warning | Status.error;
-  message: string;
-}
-
-export type R<T = undefined> = SuccessResponse<T> | FailureResponse;
