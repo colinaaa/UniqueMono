@@ -1,5 +1,12 @@
 # @uniqs/api
 
+## 0.0.3
+
+### Patch Changes
+
+- [#18](https://github.com/colinaaa/UniqueMono/pull/18) [`b3add81`](https://github.com/colinaaa/UniqueMono/commit/b3add817234e90d6bd8ca54d4b04ff1dd1b9221e) Thanks [@colinaaa](https://github.com/colinaaa)! - - Split `api.ts` to `requests.ts` and `responses.ts`
+  - Using string literal union instead of enum
+
 ## 0.0.2
 
 ### Patch Changes
