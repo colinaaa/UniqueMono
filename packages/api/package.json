@@ -1,6 +1,6 @@
 {
   "name": "@uniqs/api",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "the API definition for Unique Studio",
   "author": "Unique Studio",
   "homepage": "https://github.com/UniqueStudio/UniqueMono/packages/api",
