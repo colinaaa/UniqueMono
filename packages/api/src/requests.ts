@@ -1,83 +1,99 @@
-import { Evaluation, Gender, Grade, Period, Rank, Step } from '@uniqs/config';
+import { Gender, Grade, Rank, Step } from '@uniqs/config';
+import { Comment, Group, Interview, SMSType } from './types';
 
-import { Group, GroupOrTeam } from './types';
+// =================
+// auth
+// =================
 
-export interface CandidateForm {
-  id: string;
+// POST /user/login
+export interface AuthCode {
+  phone: string;
+  code: string;
+}
+
+// POST candidate/login
+export interface AuthPassword {
+  phone: string;
+  password: string;
+}
+
+// =================
+// candidates
+// =================
+
+export interface SetCandidateInfo {
   name: string;
   gender: Gender;
+  group: Group;
   grade: Grade;
   institute: string;
   major: string;
   rank: Rank;
   mail: string;
-  phone: string;
-  group: Group;
   intro: string;
   isQuick: boolean;
   referrer?: string;
-  resume?: string | File | FileList;
+  resume?: File | FileList | string;
 }
 
-export interface Candidate<T = Date> extends CandidateForm {
-  updatedAt: T;
-  id: string;
-  abandoned: boolean;
-  rejected: boolean;
-  step: Step;
-  interviewSelections: Interview<T>[];
-  interviewAllocations: {
-    group?: T;
-    team?: T;
-  };
-  comments: Comment[];
-}
-
-export interface Comment {
-  id: string;
-  user: User;
-  content: string;
-  evaluation: Evaluation;
-}
-
-export interface User {
-  id: string;
-  weChatID: string;
-  name: string;
-  password?: string;
-  joinTime: string;
-  isCaptain: boolean;
-  isAdmin: boolean;
+export interface CreateCandidate extends SetCandidateInfo {
   phone: string;
-  mail?: string;
-  gender: Gender;
-  group: Group;
-  avatar?: string;
+  rid: string;
 }
 
-export interface Interview<T = Date> {
+export interface MoveCandidate {
+  from: Step;
+  to: Step;
+}
+
+export interface AllocateOne {
+  time: string;
+}
+
+export interface AllocateMany {
+  cids: string[];
+}
+
+// =================
+// comments
+// =================
+
+export interface AddComment {
+  cid: string;
+  comment: Comment;
+  token: string;
+}
+
+export interface RemoveComment {
   id: string;
-  date: T;
-  period: Period;
-  name: GroupOrTeam;
-  slotNumber: number;
+  token: string;
 }
 
-export interface Recruitment<T = Date> {
-  id: string;
-  name: string;
-  beginning: T;
-  deadline: T;
-  end: T;
-  interviews: Interview<T>[];
-  statistics?: Record<Group, Record<Step, number | undefined> | undefined>;
+export interface SetRecruitmentSchedule {
+  beginning: string;
+  deadline: string;
+  end: string;
 }
 
-export interface Message {
-  isSelf: boolean;
+export interface SetRecruitmentInterviews {
+  inverviews: Interview[];
+}
+
+export interface CreateRecruitment {
   name: string;
-  time: number;
-  isImage: boolean;
-  avatar: string;
-  content: string;
+}
+
+export interface SendSMSToCandidate {
+  type: SMSType;
+  time?: string;
+  place?: string;
+  rest?: string;
+  next: Step;
+  cids: string[];
+}
+
+export interface SetUserInfo {
+  mail: string;
+  phone: string;
+  password?: string;
 }
