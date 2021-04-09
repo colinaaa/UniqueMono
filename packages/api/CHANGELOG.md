@@ -1,5 +1,15 @@
 # @uniqs/api
 
+## 0.1.1
+
+### Patch Changes
+
+- [#25](https://github.com/colinaaa/UniqueMono/pull/25) [`894d151`](https://github.com/colinaaa/UniqueMono/commit/894d15115c8f78093d91f8eb1d7607b6dd516a25) Thanks [@colinaaa](https://github.com/colinaaa)! - - Add missing request type `SelectInterviewSlots`
+  - Fix unmatched request type `AddComment`
+  - Add `Optional` type helper
+- Updated dependencies [[`894d151`](https://github.com/colinaaa/UniqueMono/commit/894d15115c8f78093d91f8eb1d7607b6dd516a25)]:
+  - @uniqs/utils@0.1.1
+
 ## 0.1.0
 
 ### Minor Changes

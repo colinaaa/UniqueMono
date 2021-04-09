@@ -1,5 +1,11 @@
 # @uniqs/storage
 
+## 0.1.2
+
+### Patch Changes
+
+- [#24](https://github.com/colinaaa/UniqueMono/pull/24) [`6872e00`](https://github.com/colinaaa/UniqueMono/commit/6872e0031e97c8b8fb24cf139a78d5cf502e6d38) Thanks [@colinaaa](https://github.com/colinaaa)! - add type entry in `package.json`
+
 ## 0.1.1
 
 ### Patch Changes

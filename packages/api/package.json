@@ -1,6 +1,6 @@
 {
   "name": "@uniqs/api",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "the API definition for Unique Studio",
   "author": "Unique Studio",
   "homepage": "https://github.com/UniqueStudio/UniqueMono/packages/api",
@@ -37,6 +37,6 @@
   },
   "dependencies": {
     "@uniqs/config": "^0.0.3",
-    "@uniqs/utils": "^0.1.0"
+    "@uniqs/utils": "^0.1.1"
   }
 }
