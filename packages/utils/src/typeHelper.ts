@@ -10,3 +10,5 @@ export type StringValueKeysOf<T> = {
 export type NonStringValueKeysOf<T> = {
   [K in keyof T]-?: T[K] extends string | undefined ? never : K;
 }[StringKeyOf<T>];
+
+export type Optional<T, K extends keyof T> = Pick<Partial<T>, K> & Omit<T, K>;

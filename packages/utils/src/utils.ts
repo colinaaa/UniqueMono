@@ -22,4 +22,4 @@ export const hasOwn = (val: UnknownObject, key: string | symbol): key is keyof t
 
 export type UnknownObject = Record<string | symbol, unknown>;
 
-export type { NonStringValueKeysOf, StringValueKeysOf } from './typeHelper';
+export type { NonStringValueKeysOf, StringValueKeysOf, Optional } from './typeHelper';
