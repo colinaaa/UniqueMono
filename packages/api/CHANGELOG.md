@@ -1,5 +1,11 @@
 # @uniqs/api
 
+## 0.0.4
+
+### Patch Changes
+
+- [#20](https://github.com/colinaaa/UniqueMono/pull/20) [`3c3b9b7`](https://github.com/colinaaa/UniqueMono/commit/3c3b9b762bcf174bcf0d3583d53ad12abd00ff81) Thanks [@colinaaa](https://github.com/colinaaa)! - change entry point in package.json
+
 ## 0.0.3
 
 ### Patch Changes
